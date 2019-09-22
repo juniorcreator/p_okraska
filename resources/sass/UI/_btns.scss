@@ -1,0 +1,120 @@
+.btn {
+  display: inline-block;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 5px;
+  color: #ffffff;
+  line-height: 1;
+  font-size: 17px;
+  transition: background .3s;
+  position: relative;
+  &--raschet {
+    font-family: 'Akrobat-Bold';
+    background-color: #db1b49;
+    background-image: linear-gradient(82deg, #3971d6 0%, #892ed7 100%);
+    padding: 15px 28px 15px 32px;
+    overflow: hidden;
+    .btn__text {
+      font-family: 'Akrobat-Bold';
+      position: relative;
+      z-index: 3;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: -110%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      background-image: linear-gradient(82deg, #C1394D 0%, #E64BCC 100%);
+      z-index: 2;
+      transition: opacity .3s, left .3s;
+    }
+    &:hover {
+      &:after {
+        left: 0;
+      }
+    }
+  }
+  &--order {
+    max-width: 317px;
+    width: 100%;
+    background-color: #db1b49;
+    background-image: linear-gradient(82deg, #C1394D 0%, #E64BCC 100%);
+    padding: 15px 28px 15px 32px;
+    overflow: hidden;
+    cursor: pointer;
+    .btn__text {
+      font-family: 'Akrobat-Bold';
+      position: relative;
+      z-index: 3;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: -110%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      background-image: linear-gradient(82deg, #3971d6 0%, #892ed7 100%);
+      z-index: 2;
+      transition: opacity .3s, left .3s;
+    }
+    &:hover {
+      &:after {
+        left: 0;
+      }
+    }
+    @include xs_540 {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+  &--form-order{
+    max-width: 317px;
+    width: 100%;
+    padding: 15px 28px 15px 32px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #db1b49;
+    background-image: linear-gradient(82deg, #e64bcc 0%, #c1394c 100%);
+    .btn__text {
+      font-family: 'Akrobat-Bold';
+      position: relative;
+      z-index: 3;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: -110%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      background-image: linear-gradient(82deg, #3971d6 0%, #892ed7 100%);
+      z-index: 2;
+      transition: opacity .3s, left .3s;
+    }
+    &:hover {
+      &:after {
+        left: 0;
+      }
+    }
+  }
+  &--watch-deal {
+    max-width: 317px;
+    width: 100%;
+    padding: 13px 28px 12px 32px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Akrobat-SemiBold';
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

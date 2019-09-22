@@ -1,0 +1,159 @@
+.home-page {
+
+}
+.partners {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    display: inline-block;
+    width: calc((100% - 228px) / 5);
+  }
+  &__logo {
+    text-align: center;
+    position: relative;
+    padding-bottom: 63%;
+    margin-bottom: 5px;
+    img {
+      position: absolute;
+      left: 0;
+      top: 2%;
+      object-fit: contain;
+      width: 90%;
+      height: 96%;
+    }
+  }
+  p {
+    color: #21314e;
+    font-family: 'Akrobat-SemiBold';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25px;
+    word-wrap: break-word;
+  }
+  @include md_960 {
+    &__wrap {
+      flex-wrap: wrap;
+    }
+    p {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+  @include sm_769 {
+    &__wrap {
+      justify-content: space-evenly;
+    }
+    &__item {
+      width: calc((100% - 97px) / 3);
+      margin-bottom: 20px;
+    }
+  }
+  @include xs_540 {
+    &__item {
+      width: calc((100% - 97px) / 2);
+    }
+  }
+  @include xs_320 {
+    &__logo {
+      padding-bottom: 55%;
+    }
+    &__item {
+      width: 75%;
+      border-bottom: 1px dashed;
+      padding-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+
+.sertificate {
+  display: flex;
+  justify-content: space-between;
+  &__content {
+    margin-right: 20px;
+    max-width: 409px;
+  }
+  &__title {
+    color: #ffffff;
+    font-family: 'Gilroy-Regular';
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 35px;
+  }
+  p {
+    color: #ffffff;
+    font-family: 'Akrobat-SemiBold';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  img {
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform .2s;
+    position: relative;
+    z-index: 2;
+  }
+  @include md_960 {
+    img {
+    }
+  }
+  @include sm_769 {
+    img {
+    }
+  }
+  @include sm_690 {
+    flex-direction: column;
+    align-items: center;
+    &__content {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+.scaler {
+  position: fixed;
+  background-color: rgba(0,0,0,.4);
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s;
+  opacity: 0;
+  display: none;
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    transition: transform .3s;
+    cursor: pointer;
+    max-width: 600px;
+  }
+  &.active {
+    display: block;
+    opacity: 1;
+    img {
+      width: 90%;
+      z-index: 21;
+    }
+  }
+  @include xs_540 {
+    &.active {
+      img {
+        width: 98%;
+      }
+    }
+  }
+}

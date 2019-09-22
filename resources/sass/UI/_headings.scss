@@ -1,0 +1,43 @@
+.heading {
+  font-family: 'Circe-bold';
+  font-size: 36px;
+  line-height: 113.5%;
+  color: #000000;
+  margin-bottom: 12px;
+}
+.s-heading {
+  color: #1e304e;
+  font-family: 'Gilroy-ExtraBold';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  padding-left: 86px;
+  margin: 0 0 39px 34px;
+  max-width: 1920px;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    width: 74px;
+    background-color: #1e304e;
+  }
+  @include sm_769{
+    margin: 0 0 50px 15px;
+    padding-left: 50px;
+    &:after {
+      width: 40px;
+    }
+  }
+}
+.slide-heading {
+  fcolor: #1e304e;
+  font-family: Gilroy;
+  font-size: 45px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 24px;
+}

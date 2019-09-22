@@ -1,0 +1,76 @@
+.home-banner {
+  &__title {
+    font-size: 55px;
+    font-family: 'Gilroy-ExtraBold';
+    color: rgba(255,255,255,.8);
+    max-width: 573px;
+    margin-bottom: 22px;
+    span {
+      display: block;
+      font-family: 'Akrobat-Light';
+      font-size: 52px;
+      margin-top: 10px;
+      color:rgba(255,255,255,.9);
+    }
+  }
+  &__text {
+    max-width: 666px;
+    margin-bottom: 24px;
+    color: rgba(255,255,255, .9);
+    font-family: 'Akrobat-Regular';
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  .btn {
+
+  }
+  @include md_1190{
+    &__title {
+      margin: 0 0 22px 0;
+    }
+  }
+  @include md_960{
+    &__title {
+      font-size: 46px;
+      span {
+        font-size: 42px;
+      }
+    }
+    &__text {
+      font-size: 21px;
+      line-height: 29px;
+    }
+  }
+  @include sm_769{
+    &__title {
+      font-size: 40px;
+      line-height: 1;
+      margin: 0 0 15px 0;
+      span {
+        font-size: 35px;
+      }
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 23px;
+      text-shadow: 0px 0px 9px black;
+    }
+  }
+  @include sm_690{
+    &__title {
+      font-size: 35px;
+      span {
+        font-size: 29px;
+      }
+    }
+  }
+  @include xs_540 {
+    &__title {
+      font-size: 28px;
+      span {
+        font-size: 25px;
+      }
+    }
+  }
+}

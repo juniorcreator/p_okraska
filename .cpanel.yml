@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export REPOPATH=/home/timetowe/repositories/poroshok/*
+    - export SITEPATH=/home/timetowe/public_html/poroshok.time-to-web.com
+    - /bin/rsync -rav --exclude '.git' --exclude '.cpanel.yml' --del $REPOPATH $SITEPATH
